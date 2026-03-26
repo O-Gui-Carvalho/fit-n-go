@@ -215,3 +215,22 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+
+.sublinhado {
+  position: relative;
+}
+
+.sublinhado::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #1e2939;
+  transition: all .3s;
+}
+
+.sublinhado:hover::before {
+  width: 100%;
+}
