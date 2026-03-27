@@ -2,20 +2,15 @@ import { Button } from '@/components/ui/button'
 import { ChevronRight, Heart, Menu, Search, ShoppingBagIcon, User2Icon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import MenuButton from './MenuButton'
 
 export default function Header() {
   return (
-    <header className='sticky'>
+    <header>
       <div className="grid grid-cols-3 justify-between items-center w-full px-2 py-4 md:px-8 gap-4 border-b">
         {/* Esquerda: Menu e Pesquisa */}
         <div className="flex gap-4 items-center">
-          <Button 
-            variant="secondary"
-            className="rounded-full bg-gray-50 hover:bg-gray-200 text-gray-800 transition-colors duration-300 h-10 px-4 flex gap-2 cursor-pointer"
-          >
-            <Menu size={16}/>
-            <span>Menu</span>
-          </Button>
+          <MenuButton />
           
           {/* Placeholder de Pesquisa */}
           <div className="hidden md:flex flex-1 justify-between items-center max-w-80 rounded-full bg-gray-50 hover:bg-gray-200 text-gray-800 transition-colors duration-300 px-4 h-10 text-sm cursor-text">
@@ -30,7 +25,7 @@ export default function Header() {
             src={'/logo.svg'} 
             alt='Logo Fit&Go' 
             height={29} 
-            width={90} 
+            width={91} 
             priority 
             className='hidden lg:block'
           />
