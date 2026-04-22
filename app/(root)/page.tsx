@@ -23,7 +23,7 @@ const slides = [
 export default async function Homepage() {
   return (
     <div className='min-h-screen'>
-      <Banner slide={slides} interval={2000}/>
+      <Banner slide={slides} interval={8000}/>
       {/* <ProductList data={sampleData.products} title='Em Alta' limit={4}/>*/}
     </div>
   )
